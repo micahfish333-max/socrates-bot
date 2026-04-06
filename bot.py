@@ -12,90 +12,86 @@ client = discord.Client(intents=intents)
 cooldowns = {}
 COOLDOWN_SECONDS = 3
 
-QUOTES = [
-"The only true wisdom is in knowing you know nothing.",
-"An unexamined life is not worth living.",
-"I cannot teach anybody anything. I can only make them think.",
-"To find yourself, think for yourself.",
-"Be as you wish to seem.",
-"Wonder is the beginning of wisdom.",
-"He who is not contented with what he has would not be contented with what he would like to have.",
-"Education is the kindling of a flame, not the filling of a vessel.",
-"True knowledge exists in knowing that you know nothing.",
-"Beware the barrenness of a busy life.",
-"The greatest way to live with honor in this world is to be what we pretend to be.",
-"From the deepest desires often come the deadliest hate.",
-"Contentment is natural wealth, luxury is artificial poverty.",
-"Prefer knowledge to wealth, for the one is transitory, the other perpetual.",
-"He is richest who is content with the least.",
-"The secret of happiness is not found in seeking more, but in developing the capacity to enjoy less.",
-"Every action has its pleasures and its price.",
-"If a man is proud of his wealth, he should not be praised until it is known how he employs it.",
-"Not life, but good life, is to be chiefly valued.",
-"Death may be the greatest of all human blessings.",
-"Let him who would move the world first move himself.",
-"Envy is the ulcer of the soul.",
-"The easiest and noblest way is not to be crushing others, but to be improving yourselves.",
-"Think not those faithful who praise all thy words and actions; but those who kindly reprove thy faults.",
-"Strong minds discuss ideas, average minds discuss events, weak minds discuss people.",
-"There is only one good, knowledge, and one evil, ignorance.",
-"To know, is to know that you know nothing.",
-"No evil can happen to a good man, either in life or after death.",
-"Be slow to fall into friendship, but when you are in, continue firm and constant.",
-"Employ your time in improving yourself by other men’s writings.",
-"Once made equal to man, woman becomes his superior.",
-"Our prayers should be for blessings in general, for God knows best what is good for us.",
-"The beginning of wisdom is a definition of terms.",
-"He is a man of courage who does not run away, but remains at his post and fights against the enemy.",
-"Where there is reverence there is fear, but there is not reverence everywhere that there is fear.",
-"If all misfortunes were laid in one common heap, most would be content to take their own and depart.",
-"The hottest love has the coldest end.",
-"Understanding a question is half an answer.",
-"He who would be a good servant must be a good master.",
-"Not those who have much are rich, but those who need little.",
-"We cannot live better than in seeking to become better.",
-"All men’s souls are immortal, but the souls of the righteous are immortal and divine.",
-"Be nicer than necessary to everyone you meet.",
-"The only good is knowledge and the only evil is ignorance."
+ QUOTES = [
+
+# 🔹 10 short quotes
+"I know that I know nothing. — Socrates",
+"I think, therefore I am. — René Descartes",
+"Man is condemned to be free. — Jean-Paul Sartre",
+"God is dead. — Friedrich Nietzsche",
+"Happiness is the highest good. — Aristotle",
+"Virtue is knowledge. — Socrates",
+"Know thyself. — Socrates",
+"The only thing necessary for evil to triumph is for good men to do nothing. — Edmund Burke",
+"Man is the measure of all things. — Protagoras",
+"Freedom is the will to be responsible to ourselves. — Friedrich Nietzsche",
+
+# 🔹 20 medium quotes (1–2 sentences)
+"An unexamined life is not worth living, for without reflection we cannot truly understand ourselves. — Socrates",
+"You have power over your mind, not outside events. Realize this and you will find strength. — Marcus Aurelius",
+"The impediment to action advances action. What stands in the way becomes the way. — Marcus Aurelius",
+"Do not act as if you were going to live ten thousand years. Death hangs over you while you live. — Marcus Aurelius",
+"All men by nature desire to know, and this desire leads them toward understanding. — Aristotle",
+"Happiness depends upon ourselves, not external circumstances. — Aristotle",
+"Man is born free, and everywhere he is in chains. — Jean-Jacques Rousseau",
+"Freedom is not doing what we want, but having the ability to choose what is right. — Immanuel Kant",
+"I cannot teach anybody anything. I can only make them think. — Socrates",
+"Waste no more time arguing what a good man should be. Be one. — Marcus Aurelius",
+"He who has a why to live can bear almost any how. — Friedrich Nietzsche",
+"To do injustice is more shameful than to suffer it. — Plato",
+"The beginning is the most important part of the work. — Plato",
+"Justice means giving each what is owed, creating balance in society. — Plato",
+"One cannot step into the same river twice. — Heraclitus",
+"The soul becomes dyed with the color of its thoughts. — Marcus Aurelius",
+"Pleasure in the job puts perfection in the work. — Aristotle",
+"Liberty consists in doing what one desires. — John Stuart Mill",
+"The mind is everything; what you think, you become. — Buddha",
+"He who opens a school door closes a prison. — Victor Hugo",
+
+# 🔹 30 longer quotes (4–5 sentences)
+"The unexamined life is not worth living because without reflection we live without purpose or direction. Socrates believed that true wisdom comes from questioning our beliefs and actions. By examining ourselves, we can improve and grow. Without this, life becomes empty and automatic. — Socrates",
+
+"You have power over your mind, not outside events. When you accept this, you gain control over how you respond to the world. External events cannot disturb your inner peace unless you allow them to. This understanding is the foundation of true strength. — Marcus Aurelius",
+
+"The impediment to action advances action. Difficulties are not obstacles but opportunities to grow stronger. When we face challenges, we develop resilience and wisdom. What stands in the way becomes part of the path forward. — Marcus Aurelius",
+
+"Do not waste time arguing about what a good person should be. Instead, focus on becoming one through your actions. Living well requires discipline, consistency, and self-awareness. Your character is built through what you do, not what you say. — Marcus Aurelius",
+
+"Man is condemned to be free, meaning we are responsible for all our choices. There is no escaping this responsibility, even when we try to avoid it. Our actions define who we are. Freedom carries both power and burden. — Jean-Paul Sartre",
+
+"Existence precedes essence, meaning we are not born with a fixed purpose. Instead, we create our identity through our choices. This gives us complete freedom but also full responsibility. We shape ourselves through action. — Jean-Paul Sartre",
+
+"I think, therefore I am. This statement proves that the act of thinking confirms existence. Even if everything else is doubted, the thinker cannot be denied. Awareness itself is proof of being. — René Descartes",
+
+"Know thyself, for understanding your own nature is the beginning of wisdom. Without self-knowledge, you cannot truly improve. Reflection allows you to see your strengths and weaknesses. This awareness leads to growth. — Socrates",
+
+"Happiness is the highest good, because all human actions aim toward it. Aristotle believed that a good life is one lived with virtue and reason. External success alone is not enough. True happiness comes from within. — Aristotle",
+
+"Man is born free, yet society often places chains upon him. These chains can limit freedom and individuality. True freedom requires awareness and independence of thought. Only then can a person act according to their will. — Jean-Jacques Rousseau",
+
+"The only thing necessary for evil to triumph is for good men to do nothing. When people stay silent, injustice spreads. Action is required to maintain justice and order. Silence in the face of wrong is a form of permission. — Edmund Burke",
+
+"The mind is everything; what you think, you become. Your thoughts shape your actions, and your actions shape your life. Positive thinking leads to positive outcomes. Master your mind, and you master your life. — Buddha",
+
+"He who has a why to live can bear almost any how. A strong purpose allows a person to endure suffering. Meaning gives strength in difficult times. Without purpose, life becomes harder to sustain. — Friedrich Nietzsche",
+
+"One cannot step into the same river twice, because both the river and the person are constantly changing. This reflects the nature of reality. Everything is in constant motion and transformation. Nothing remains the same. — Heraclitus",
+
+"The beginning is the most important part of the work because it sets the foundation for everything that follows. A strong start leads to better outcomes. Careful planning is essential. Success often depends on how things begin. — Plato",
+
+"Justice means giving each what is owed, ensuring fairness in society. It requires balance between individuals and the community. Without justice, society becomes unstable. Fairness creates harmony. — Plato",
+
+"Pleasure in the job puts perfection in the work. When you enjoy what you do, your work improves. Motivation leads to higher quality. Passion drives excellence. — Aristotle",
+
+"Freedom is not doing whatever we want, but acting according to reason. True freedom involves self-control and responsibility. Without reason, freedom becomes chaos. Discipline defines true liberty. — Immanuel Kant",
+
+"The soul becomes dyed with the color of its thoughts. Our thoughts shape our character and outlook on life. Positive thoughts lead to positive living. What we focus on defines us. — Marcus Aurelius",
+
+"He who opens a school door closes a prison, because education removes ignorance. Knowledge creates opportunity and freedom. Learning transforms individuals and society. Education is a path to liberation. — Victor Hugo",
+
 ]
-QUOTES += [
-"Man is born free, and everywhere he is in chains.",
-"The unexamined life is not worth living.",
-"I think, therefore I am.",
-"Happiness depends upon ourselves.",
-"It is the mark of an educated mind to entertain a thought without accepting it.",
-"Knowing yourself is the beginning of all wisdom.",
-"The only thing I know is that I know nothing.",
-"Do not do to others what angers you if done to you.",
-"The greatest wealth is to live content with little.",
-"Virtue is its own reward.",
-"He who opens a school door closes a prison.",
-"Liberty consists in doing what one desires.",
-"The aim of the wise is not to secure pleasure, but to avoid pain.",
-"It is not enough to have a good mind; the main thing is to use it well.",
-"Time is the moving image of eternity.",
-"The beginning is the most important part of the work.",
-"Justice means giving each what is owed.",
-"The wise man does not lay up his own treasures.",
-"Excellence is never an accident.",
-"Pleasure in the job puts perfection in the work.",
-"Silence is the sleep that nourishes wisdom.",
-"To do injustice is more shameful than to suffer it.",
-"The root of education is bitter, but the fruit is sweet.",
-"Without music, life would be a mistake.",
-"Man cannot remake himself without suffering.",
-"All that is necessary for evil to succeed is that good men do nothing.",
-"The highest form of knowledge is empathy.",
-"He who is brave is free.",
-"A wise man speaks because he has something to say.",
-"Education is the best provision for old age.",
-"The mind is everything; what you think you become.",
-"Those who know do not speak; those who speak do not know.",
-"The journey of a thousand miles begins with a single step.",
-"The greater the difficulty, the more glory in surmounting it.",
-"He who conquers himself is the mightiest warrior.",
-"To rule oneself is the ultimate power.",
-]
+
+
 def check_cooldown(user_id):
     now = time.time()
     if user_id in cooldowns:
