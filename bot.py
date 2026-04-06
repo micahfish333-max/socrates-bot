@@ -96,6 +96,7 @@ async def on_message(message):
 
         quote = random.choice(QUOTES)
         await message.reply(f"💭 {quote}")
-
+import os
+print("TOKEN =", os.getenv("TOKEN"))
 # 🔑 token from environment variable
 client.run(os.getenv("TOKEN"))
