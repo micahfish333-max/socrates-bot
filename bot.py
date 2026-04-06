@@ -58,7 +58,44 @@ QUOTES = [
 "Be nicer than necessary to everyone you meet.",
 "The only good is knowledge and the only evil is ignorance."
 ]
-
+QUOTES += [
+"Man is born free, and everywhere he is in chains.",
+"The unexamined life is not worth living.",
+"I think, therefore I am.",
+"Happiness depends upon ourselves.",
+"It is the mark of an educated mind to entertain a thought without accepting it.",
+"Knowing yourself is the beginning of all wisdom.",
+"The only thing I know is that I know nothing.",
+"Do not do to others what angers you if done to you.",
+"The greatest wealth is to live content with little.",
+"Virtue is its own reward.",
+"He who opens a school door closes a prison.",
+"Liberty consists in doing what one desires.",
+"The aim of the wise is not to secure pleasure, but to avoid pain.",
+"It is not enough to have a good mind; the main thing is to use it well.",
+"Time is the moving image of eternity.",
+"The beginning is the most important part of the work.",
+"Justice means giving each what is owed.",
+"The wise man does not lay up his own treasures.",
+"Excellence is never an accident.",
+"Pleasure in the job puts perfection in the work.",
+"Silence is the sleep that nourishes wisdom.",
+"To do injustice is more shameful than to suffer it.",
+"The root of education is bitter, but the fruit is sweet.",
+"Without music, life would be a mistake.",
+"Man cannot remake himself without suffering.",
+"All that is necessary for evil to succeed is that good men do nothing.",
+"The highest form of knowledge is empathy.",
+"He who is brave is free.",
+"A wise man speaks because he has something to say.",
+"Education is the best provision for old age.",
+"The mind is everything; what you think you become.",
+"Those who know do not speak; those who speak do not know.",
+"The journey of a thousand miles begins with a single step.",
+"The greater the difficulty, the more glory in surmounting it.",
+"He who conquers himself is the mightiest warrior.",
+"To rule oneself is the ultimate power.",
+]
 def check_cooldown(user_id):
     now = time.time()
     if user_id in cooldowns:
