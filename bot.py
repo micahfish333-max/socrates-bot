@@ -11,8 +11,7 @@ client = discord.Client(intents=intents)
 # ⏱️ cooldown (seconds)
 cooldowns = {}
 COOLDOWN_SECONDS = 3
-
- QUOTES = [
+QUOTES = [
 
 # 🔹 10 short quotes
 "I know that I know nothing. — Socrates",
